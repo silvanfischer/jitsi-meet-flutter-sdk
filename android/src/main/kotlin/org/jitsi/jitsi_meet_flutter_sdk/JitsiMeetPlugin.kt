@@ -3,6 +3,7 @@ package org.jitsi.jitsi_meet_flutter_sdk
 import android.app.Activity
 import androidx.annotation.NonNull
 import android.content.Intent
+import android.os.Bundle
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -48,6 +49,7 @@ class JitsiMeetPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
       "sendChatMessage" -> sendChatMessage(call, result)
       "closeChat" -> closeChat(call, result)
       "retrieveParticipantsInfo" -> retrieveParticipantsInfo(call, result)
+      "enterPiP" -> enterPiP(call, result)
       else -> result.notImplemented()
     }
   }
@@ -97,6 +99,21 @@ class JitsiMeetPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
           is Boolean -> setConfigOverride(key, value)
           is Int -> setConfigOverride(key, value)
           is Array<*> -> setConfigOverride(key, value as Array<out String>)
+          is List<*> -> {
+            if (value.isNotEmpty() && value[0] is Map<*, *>) {
+              val bundles = ArrayList<Bundle>()
+              for (map in value) {
+                val bundle = Bundle()
+                (map as Map<*, *>).forEach { (k, v) ->
+                  bundle.putString(k.toString(), v.toString())
+                }
+                bundles.add(bundle)
+              }
+              setConfigOverride(key, bundles)
+            } else {
+              setConfigOverride(key, value.toString())
+            }
+          }
           else -> setConfigOverride(key, value.toString())
         }
       }
@@ -176,5 +193,11 @@ class JitsiMeetPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     val retrieveParticipantsInfoIntent: Intent = Intent("org.jitsi.meet.RETRIEVE_PARTICIPANTS_INFO");
     LocalBroadcastManager.getInstance(activity!!.applicationContext).sendBroadcast(retrieveParticipantsInfoIntent)
     result.success("Successfully retrieved participants info")
+  }
+
+  private fun enterPiP(call: MethodCall, result: Result) {
+    val enterPiPIntent = Intent("org.jitsi.meet.ENTER_PICTURE_IN_PICTURE");
+    LocalBroadcastManager.getInstance(activity!!.applicationContext).sendBroadcast(enterPiPIntent)
+    result.success("Successfully entered PiP")
   }
 }

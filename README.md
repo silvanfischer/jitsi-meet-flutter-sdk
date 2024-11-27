@@ -1,9 +1,17 @@
 # Jitsi Meet Flutter SDK
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-darkblue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![pub package](https://img.shields.io/badge/pub-v0.4.2-blue)](https://pub.dev/packages/jitsi_meet_flutter_sdk)
+[![pub package](https://img.shields.io/badge/pub-v10.3.0-blue)](https://pub.dev/packages/jitsi_meet_flutter_sdk)
 
 The Jitsi Meet Flutter SDK provides the same user experience as the Jitsi Meet app, in the form of a Flutter plugin so that you can embed and customize Jitsi Meet in your own Flutter app.
+
+## Supported platforms
+
+| Platform | Supported | Notes                             |
+| -------- | --------- | --------------------------------- |
+| Android  | ✅         | Minimum API level is 24           |
+| iOS      | ✅         | Minimum supported version is 13.4 |
+| Web      | ❌         |                                   |
 
 ## Sample application using the Flutter
 
@@ -22,7 +30,7 @@ $ flutter pub add jitsi_meet_flutter_sdk
 The command above will add this to the `pubspec.yaml` file in your project (you can do this manually):
 ```yaml
 dependencies:
-    jitsi_meet_flutter_sdk: ^0.4.2
+    jitsi_meet_flutter_sdk: ^10.3.0
 ```
 
 ### Install 
@@ -57,10 +65,10 @@ jitsiMeet.join(options);
 
 ### iOS
 
-Make sure in `Podfile` from `ios` directory you set the ios version `12.4 or higher` 
+Make sure in `Podfile` from `ios` directory you set the ios version `15.1 or higher` 
 
 ```
-platform :ios, '12.4'
+platform :ios, '15.1'
 ```
 
 The plugin requests camera and microphone access, make sure to include the required entries for `NSCameraUsageDescription` and `NSMicrophoneUsageDescription` in your `Info.plist` file from the `ios/Runner` directory.

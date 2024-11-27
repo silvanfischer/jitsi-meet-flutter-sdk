@@ -1,3 +1,40 @@
+## 10.3.0 
+
+* chore(deps): update native sdks to 10.3.0 [1d34c15](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/1d34c15615dcbd8a161b8850bfe0906584598161).
+
+## 10.2.1 
+
+* chore(deps): update native sdks to 10.2.1 [bc0d282](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/bc0d282f102aab555079ee8fd25d2b07e4d645ec).
+
+## 10.2.0 
+
+* chore(deps): update native sdks to 10.2.0 [5e100b9](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/5e100b98ea3de5069850668aafdb23ba3ddc654b).
+* example Podfile update [8074483](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/8074483cb9b33c5604fcbd7f69da601abbd34aab).
+* podspec file update [24762dd](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/24762ddb9fd436493abd680e3d89fa136d139d04).
+* Update update-native-sdks.sh [629c3be](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/629c3bed823f7ed6bf060fca883be04a93ce95f3).
+
+## 10.1.2 
+
+* chore(deps): update native sdks to 10.1.2 [4faf3e6](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/4faf3e6dc12e647527d0e762d1b1e8e67cf09ac1).
+
+## 10.1.1 
+
+* chore(sdks, version): bump to 10.1.1 [33aa116](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/33aa116c3d38a9e7e083fa8eeeebbd9bb886d39c).
+
+## 10.1.0 
+
+* chore(deps): update native sdks to 10.1.0 [b490e8a](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/b490e8a91afb02dabe83a52a5cf7789372599c11).
+* feat(event-listener): Add customOverflowMenuButtonPressed to JitsiMeetEventListener [3171f51](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/3171f518d237440990525c399629e97f1c817058).
+* Update README.md [0c1d270](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/0c1d2709f2656e97d02231262a83dffcaaff0ee6).
+
+## 10.0.2 
+
+* chore(deps): update native sdks to 10.0.1 [b186bc3](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/b186bc3a54c7719d04e4562b204ba3ee8400d656).
+
+## 10.0.1 
+
+* README file update [17e0694](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/17e06949bbfc861508bdb834a617f22427a88a61).
+
 ## 0.4.2 
 
 * v0.4.2 [44025dc](https://github.com/jitsi/jitsi-meet-flutter-sdk/commit/44025dce27d9bc5d358b9bce7f6cea604c6fedd8).
